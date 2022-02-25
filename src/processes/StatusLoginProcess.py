@@ -111,10 +111,12 @@ class StatusLoginProcess(StatusProcess):
     
     # It inspects login screen and decides if login has been succeed:
     def __verify_login_success(self):
-        result = False
+        res1 = False
+        res2 = False
         if self.__login_screen and self.__login_screen.is_loaded():
-            result = self.__login_screen.get_password_placeholder_text() == PswPlaceholderTextType.CONNECTING.value
-        return result
+            res1 = self.__login_screen.get_password_placeholder_text() == PswPlaceholderTextType.CONNECTING.value
+            res2 = self.__login_screen.get_error_message_text() == ""
+        return res1 & res2
     
     # It inspects login screen and decides if it displays the expected failure information:  
     def __verify_login_failure(self):
