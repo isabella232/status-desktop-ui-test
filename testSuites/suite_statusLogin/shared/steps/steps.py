@@ -14,8 +14,7 @@
 # *          with a pattern which is matched against the steps being executed.
 # *****************************************************************************
 from data.StatusAccount import StatusAccount 
-from processes.StatusLoginProcess import StatusLoginProcess  
-    
+from processes.StatusLoginProcess import StatusLoginProcess    
 
 @Given("A Status Desktop |any| and |word| with |word| as a preference language")
 def step(context,account,password,languageType):
