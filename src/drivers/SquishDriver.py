@@ -16,7 +16,7 @@ import object
 import names
 
 # The default maximum timeout to find ui object
-_MAX_WAIT_OBJ_TIMEOUT = 5000 #[milliseconds]
+_MAX_WAIT_OBJ_TIMEOUT = 10000 #[milliseconds]
 
 # Waits for the given object is loaded, visible and enabled.
 # It returns a tuple: True in case it is found. Otherwise, false. And the object itself.
